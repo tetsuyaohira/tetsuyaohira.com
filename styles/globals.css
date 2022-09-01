@@ -28,10 +28,7 @@ img {
 }
 
 pre {
-    margin: 2rem 0;
-}
-
-code {
+    margin: 1.2rem 0;
     background: #1a2638;
     color: #fff;
     border-radius: 0.7em;
