@@ -7,7 +7,9 @@ date: "2022-08-29"
 
 Next.js + AWS S3 + Cloudfrontで構築しています。
 
-`next build && next export`
+```
+next build && next export
+```
 
 でHTMLに変換したファイルをAWS S3にアップロードして
 AWS Cloudfront経由でアクセスできるようにしています。
