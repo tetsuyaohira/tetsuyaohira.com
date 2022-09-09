@@ -12,20 +12,6 @@
     align-items: center;
 }
 
-.thumbnailImage {
-    width: 950px;
-    height: 400px;
-    margin-bottom: 20px;
-    box-shadow: 4px 5px 12px black;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.thumbnailImage:hover {
-    transform: translate(4px, 5px);
-    box-shadow: none;
-}
-
 .articles {
     display: flex;
     flex-direction: column;
