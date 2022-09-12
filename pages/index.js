@@ -30,7 +30,7 @@ export default function Home({allPostsData}) {
 
             <section>
                 <div className={styles.articles}>
-                    {allPostsData.map(({id, title, date, thumbnail}) => (
+                    {allPostsData.map(({id, title, date}) => (
                         <article key={{id}}>
                             <small className={utilStyles.lightText}>
                                 {`${date}`}
