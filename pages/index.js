@@ -1,9 +1,26 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Layout, {siteTitle} from "../components/Layout"
-import utilStyles from '../styles/utils.module.css'
 import {getPostsData} from '../lib/post'
+import styled from 'styled-components'
+
+const Articles = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  `
+const PostedDate = styled.small`
+  color: #999;
+  `
+const StyledA = styled.a`
+  color: black;
+  font-weight: 550;
+`
+const StyledP = styled.p`
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+`
 
 // SSGの場合
 export async function getStaticProps() {
@@ -23,25 +40,25 @@ export default function Home({allPostsData}) {
             </Head>
 
             <section>
-                <p className={utilStyles.headingMd}>
+                <StyledP>
                     Software Developer in Japan🧑‍💻
-                </p>
+                </StyledP>
             </section>
 
             <section>
-                <div className={styles.articles}>
+                <Articles >
                     {allPostsData.map(({id, title, date}) => (
                         <article key={{id}}>
-                            <small className={utilStyles.lightText}>
+                            <PostedDate>
                                 {`${date}`}
-                            </small>
+                            </PostedDate>
                             <br/>
                             <Link href={`/posts/${id}`}>
-                                <a className={utilStyles.boldText}>{`${title}`}</a>
+                                <StyledA>{`${title}`}</StyledA>
                             </Link>
                         </article>
                     ))}
-                </div>
+                </Articles>
             </section>
         </Layout>
     )

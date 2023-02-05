@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
     "gray-matter": "^4.0.3",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "remark": "^14.0.2",
-    "remark-html": "^15.0.1"
+    "remark-html": "^15.0.1",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "eslint": "8.22.0",
