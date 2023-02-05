@@ -1,43 +1,72 @@
 import Head from 'next/head'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import styled from 'styled-components'
 
 const name = 'Tetsuya Ohira / 大平 哲也'
 export const siteTitle = "Tetsuya Ohira's Blog"
 
+const StyledContainer = styled.div`
+  max-width: 1244px;
+  padding: 0 1rem;
+  margin: 3rem auto 6rem;
+`
+const StyledHeader = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+const StyledBackToHome = styled.div`
+  margin: 3rem 0 0;
+`
+const StyledHeaderHomeImage = styled.img`
+  width: 8rem;
+  height: 8rem;
+  border-radius: 1000px;
+`
+const StyledHeaderImage = styled.img`
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1000px;
+`
+const StyledSiteTitle = styled.h1`
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+`
+
 function Layout({children, home}) {
     return (
-        <div className={styles.container}>
+        <StyledContainer>
             <Head>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <header className={styles.header}>
+            <StyledHeader>
                 {home ? (
                     <>
-                        <img className={`${utilStyles.borderCircle} ${styles.headerHomeImage}`}
+                        <StyledHeaderHomeImage
                              src="/images/profile.jpg"/>
-                        <h1 className={utilStyles.heading2Xl}>{siteTitle}</h1>
+                        <StyledSiteTitle>{siteTitle}</StyledSiteTitle>
                     </>
                 ) : (
                     <>
-                        <img className={`${utilStyles.borderCircle}  ${styles.headerImage}`} src="/images/profile.jpg"/>
-                        <h1 className={utilStyles.heading2Xl}>{siteTitle}</h1>
+                        <StyledHeaderImage src="/images/profile.jpg"/>
+                        <StyledSiteTitle>{siteTitle}</StyledSiteTitle>
                     </>
                 )}
-            </header>
+            </StyledHeader>
             <main>{children}</main>
 
             {!home && (
-                <div className={styles.backToHome}>
+                <StyledBackToHome>
                     <Link href="/">
                         <a>← Back to home</a>
                     </Link>
-                </div>
+                </StyledBackToHome>
             )}
-
-
-        </div>
+        </StyledContainer>
     )
 }
 
