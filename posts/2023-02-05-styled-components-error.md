@@ -4,7 +4,7 @@ date: "2023-02-05"
 ---
 
 ## 事象
-Next.jsのSSRアプリケーションでStyled-componentsが適用されない
+- Next.jsのSSRアプリケーションでStyled-componentsが適用されない
 
 ## エラーメッセージ
 ```
