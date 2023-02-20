@@ -124,6 +124,6 @@ sayFruit('🍇')
 - これはEcmaScriptの仕様書に書いてあることでブラウザベンダーがどのように実装しているかは別の話とのこと
 
 ## 参考
-[javascript.info 変数スコープ、クロージャ](https://ja.javascript.info/closure)
-[超JavaScript 完全パック 2023 セクション7](https://www.udemy.com/course/javascript-complete/)
+- [javascript.info 変数スコープ、クロージャ](https://ja.javascript.info/closure)
+- [超JavaScript 完全パック 2023 セクション7](https://www.udemy.com/course/javascript-complete/)
 
