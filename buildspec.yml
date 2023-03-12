@@ -2,7 +2,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - nom install
+      - npm install
       - npm run build
       - ls -la
       - echo ${S3_BUCKET_NAME}
