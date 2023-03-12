@@ -9,5 +9,5 @@ phases:
       - echo ${CLOUDFRONT_DISTRIBUTION_ID}
   post_build:
     commands:
-      - aws s3 sync dist s3://${S3_BUCKET_NAME}
+      - aws s3 sync out s3://${S3_BUCKET_NAME}
       - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
