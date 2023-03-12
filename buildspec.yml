@@ -4,9 +4,6 @@ phases:
     commands:
       - npm install
       - npm run build
-      - ls -la
-      - echo ${S3_BUCKET_NAME}
-      - echo ${CLOUDFRONT_DISTRIBUTION_ID}
   post_build:
     commands:
       - aws s3 sync out s3://${S3_BUCKET_NAME}
