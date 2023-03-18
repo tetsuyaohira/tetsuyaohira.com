@@ -7,14 +7,14 @@ date: "2023-02-19"
 - `closure`の理解があやふや
 - `closure`は、外側の変数の情報を持った関数と言われるが、下記のコードの`sayFruit2`の中で`sayFruit1`を呼び出した時、🍌でなく🍎が出力されことを感覚では理解していたが、どのような仕様のもとに動作しているのかを知らない
 ```JavaScript
-    let food = '🍎'
-    const sayFruit1 = () => console.log(food)
+let food = '🍎'
+const sayFruit1 = () => console.log(food)
 
-    const sayFruit2 = () => {
-        let food = '🍌'
-        sayFruit1() // disp 🍎. not 🍌
-    }
-    sayFruit2()
+const sayFruit2 = () => {
+    let food = '🍌'
+    sayFruit1() // disp 🍎. not 🍌
+}
+sayFruit2()
 ```
 
 ## 解説
@@ -24,7 +24,7 @@ date: "2023-02-19"
 - 変数は`Lexical Environment`のプロパティとして管理される
 
 ```JavaScript
-    let apple = '🍎'
+let apple = '🍎'
 ```
 このコードの`Lexical Environment`は以下のようになる
 
@@ -100,14 +100,14 @@ sayFruit('🍇')
 - そのため、`sayFruit1`関数内で`food`にアクセスすると、`sayFruit1`関数の`Lexical Environment`には`food`がないので、`outerEnv` -> `[[environment]]`と辿り、グローバルの`Lexical Environment`で`food`を見つけることになる
 - `sayFruit1`関数の直前に定義した`food`の`🍌`にはアクセスしない
 ```JavaScript
-    let food = '🍎'
-    const sayFruit1 = () => console.log(food)
+let food = '🍎'
+const sayFruit1 = () => console.log(food)
 
-    const sayFruit2 = () => {
-        let food = '🍌'
-        sayFruit1() // disp 🍎. not 🍌
-    }
-    sayFruit2()
+const sayFruit2 = () => {
+    let food = '🍌'
+    sayFruit1() // disp 🍎. not 🍌
+}
+sayFruit2()
 ```
 `Lexical Environment`は以下のようになる
 
