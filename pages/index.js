@@ -2,25 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout, {siteTitle} from "../components/Layout"
 import {getPostsData} from '../lib/post'
-import styled from 'styled-components'
-
-const Articles = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  `
-const PostedDate = styled.small`
-  color: #999;
-  `
-const StyledA = styled.a`
-  color: black;
-  font-weight: 550;
-`
-const StyledP = styled.p`
-  font-size: 1.2rem;
-  line-height: 1.5;
-  text-align: center;
-`
 
 // SSGの場合
 export async function getStaticProps() {
@@ -40,25 +21,25 @@ export default function Home({allPostsData}) {
             </Head>
 
             <section>
-                <StyledP>
-                    Software Developer in Japan🧑‍💻
-                </StyledP>
+                <p className="text-center text-base">
+                    Software Developer in Japan 🚀
+                </p>
             </section>
 
             <section>
-                <Articles >
+                <article className="flex flex-col gap-y-8 pt-10">
                     {allPostsData.map(({id, title, date}) => (
                         <article key={{id}}>
-                            <PostedDate>
+                            <small className="text-gray-500">
                                 {`${date}`}
-                            </PostedDate>
+                            </small>
                             <br/>
                             <Link href={`/posts/${id}`}>
-                                <StyledA>{`${title}`}</StyledA>
+                                <a className="text-black font-medium">{`${title}`}</a>
                             </Link>
                         </article>
                     ))}
-                </Articles>
+                </article>
             </section>
         </Layout>
     )
