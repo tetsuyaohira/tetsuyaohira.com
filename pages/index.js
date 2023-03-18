@@ -1,46 +1,42 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout, {siteTitle} from "../components/Layout"
-import {getPostsData} from '../lib/post'
+import Layout, { siteTitle } from '../components/Layout'
+import { getPostsData } from '../lib/post'
 
 // SSGの場合
 export async function getStaticProps() {
-    const allPostsData = getPostsData()
-    return {
-        props: {
-            allPostsData
-        }
-    }
+  const allPostsData = getPostsData()
+  return {
+    props: {
+      allPostsData,
+    },
+  }
 }
 
-export default function Home({allPostsData}) {
-    return (
-        <Layout home>
-            <Head>
-                <title>{siteTitle}</title>
-            </Head>
+export default function Home({ allPostsData }) {
+  return (
+    <Layout home>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
 
-            <section>
-                <p className="text-center text-base">
-                    Software Developer in Japan 🚀
-                </p>
-            </section>
+      <section>
+        <p className="text-center text-base">Software Developer in Japan 🚀</p>
+      </section>
 
-            <section>
-                <article className="flex flex-col gap-y-8 pt-10">
-                    {allPostsData.map(({id, title, date}) => (
-                        <article key={{id}}>
-                            <small className="text-gray-500">
-                                {`${date}`}
-                            </small>
-                            <br/>
-                            <Link href={`/posts/${id}`}>
-                                <a className="text-black font-medium">{`${title}`}</a>
-                            </Link>
-                        </article>
-                    ))}
-                </article>
-            </section>
-        </Layout>
-    )
+      <section>
+        <article className="flex flex-col gap-y-8 pt-10">
+          {allPostsData.map(({ id, title, date }) => (
+            <article key={{ id }}>
+              <small className="text-gray-500">{`${date}`}</small>
+              <br />
+              <Link href={`/posts/${id}`}>
+                <a className="font-medium text-black">{`${title}`}</a>
+              </Link>
+            </article>
+          ))}
+        </article>
+      </section>
+    </Layout>
+  )
 }
