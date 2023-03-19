@@ -31,7 +31,7 @@ export default function Home({ allPostsData }) {
               <small className="text-gray-500">{`${date}`}</small>
               <br />
               <Link href={`/posts/${id}`}>
-                <a className="font-medium text-black">{`${title}`}</a>
+                <a className="text font-medium text-black no-underline">{`${title}`}</a>
               </Link>
             </article>
           ))}
