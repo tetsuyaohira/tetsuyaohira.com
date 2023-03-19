@@ -14,7 +14,7 @@ date: "2022-09-05"
 
 [trailingSlash](https://nextjs-ja-translation-docs.vercel.app/docs/api-reference/next.config.js/exportPathMap#末尾にスラッシュを追加する)
 
-```JavaScript
+``` js
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -31,15 +31,15 @@ const nextConfig = {
   - "パブリックアクセスをすべて ブロック"を無効化
 - Amazon S3 - アクセス許可 - バケットポリシー - 編集をクリック
   - S3バケットポリシーに以下を追加
-  ```angular2html
+  ``` json
   {
-       "Sid": "PublicReadGetObject",
-       "Effect": "Allow",
-       "Principal": "*",
-       "Action": "s3:GetObject",
-       "Resource": "arn:aws:s3:::tetsuyaohira.com/*"
-   }
-   ```
+    "Sid": "PublicReadGetObject",
+    "Effect": "Allow",
+    "Principal": "*",
+    "Action": "s3:GetObject",
+    "Resource": "arn:aws:s3:::tetsuyaohira.com/*"
+  }
+  ```
 - Amazon S3 - プロパティ - 静的ウェブサイトホスティング - 編集をクリック
     - "静的ウェブサイトホスティング"を有効
     - インデックスドキュメントに`index.html`を指定

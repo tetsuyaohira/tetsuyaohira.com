@@ -7,7 +7,7 @@ date: "2022-08-29"
 
 Next.js + AWS S3 + Cloudfrontで構築しています。
 
-```Shell
+``` bash
 next build && next export
 ```
 

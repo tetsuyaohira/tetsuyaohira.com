@@ -42,11 +42,11 @@ date: "2023-03-12"
 
 ### `GitHub`のリポジトリに`buildspec.yml`を追加
 1. `buildspec.yml`を追加
-    ```shell
+    ``` bash
     touch buildspec.yml
     ```
 2. `buildspec.yml`に以下を追加
-    ```buildspec.yml
+    ``` yaml
     version: 0.2
     phases:
       build:
