@@ -33,20 +33,21 @@ export default function Post({ postData }) {
       <article className="p-10">
         <h1 className="text-3xl font-bold">{postData.title}</h1>
         <div className="mt-5 text-gray-500">{postData.date}</div>
+        {/* eslint-disable-next-line react/no-children-prop */}
         <ReactMarkdown
           className="prose mt-5"
-          children={postData.markdown}
           components={{
             code({ node, inline, className, children, ...props }) {
               const match = /language-(\w+)/.exec(className || '')
               return !inline && match ? (
                 <SyntaxHighlighter
-                  children={String(children).replace(/\n$/, '')}
                   style={hybrid}
                   language={match[1]}
                   PreTag="div"
                   {...props}
-                />
+                >
+                  {String(children).replace(/\n$/, '')}
+                </SyntaxHighlighter>
               ) : (
                 <code className={className} {...props}>
                   {children}
@@ -54,7 +55,9 @@ export default function Post({ postData }) {
               )
             },
           }}
-        />
+        >
+          {postData.markdown}
+        </ReactMarkdown>
       </article>
     </Layout>
   )
