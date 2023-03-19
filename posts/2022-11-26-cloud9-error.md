@@ -6,14 +6,14 @@ date: "2022-11-26"
 - AWS Cloud9の作成が失敗する
 
 ## エラーメッセージ
-```Shell
+``` bash
 Unable to access your environment
 
 The environment creation failed with the error: Cloud9 could not connect to the EC2 instance. Please check your VPC configuration and network settings to troubleshoot the issue..
 ```
 ![scloud9 create error](../../images/2022-11-26-03.png)
 
-```Shell
+``` bash
 Cloud9 could not connect to the EC2 instance. Please check your VPC configuration and network settings to troubleshoot the issue. Go to CloudFormation
 ```
 ![scloud9 create error](../../images/2022-11-26-02.png)

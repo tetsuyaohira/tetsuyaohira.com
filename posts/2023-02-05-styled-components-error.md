@@ -7,7 +7,7 @@ date: "2023-02-05"
 - Next.jsのSSRアプリケーションでStyled-componentsが適用されない
 
 ## エラーメッセージ
-```Shell
+``` bash
 Warning: Prop `className` did not match. Server: "sc-eDWCr gHhIrJ" Client: "sc-eDvSVe jXCRWx" 
 ```
 
@@ -16,11 +16,11 @@ Warning: Prop `className` did not match. Server: "sc-eDWCr gHhIrJ" Client: "sc-e
 
 ## 解決方法
  - `babel-plugin-styled-components`をインストール
-```Shell
+``` bash
 npm install --save-dev babel-plugin-styled-components
 ```
  - `.babelrc`を配置
-```json
+``` json
 {
   "presets": ["next/babel"],
   "plugins": [["styled-components", { "ssr": true }]]

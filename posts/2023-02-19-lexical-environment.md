@@ -6,7 +6,7 @@ date: "2023-02-19"
 ## 課題感
 - `closure`の理解があやふや
 - `closure`は、外側の変数の情報を持った関数と言われるが、下記のコードの`sayFruit2`の中で`sayFruit1`を呼び出した時、🍌でなく🍎が出力されことを感覚では理解していたが、どのような仕様のもとに動作しているのかを知らない
-```JavaScript
+``` js
 let food = '🍎'
 const sayFruit1 = () => console.log(food)
 
@@ -23,7 +23,7 @@ sayFruit2()
 ### 変数
 - 変数は`Lexical Environment`のプロパティとして管理される
 
-```JavaScript
+``` js
 let apple = '🍎'
 ```
 このコードの`Lexical Environment`は以下のようになる
@@ -36,7 +36,7 @@ let apple = '🍎'
 - グローバルスコープ`Lexical Environment`の`outerEnv`は`null`になる
 - `outerEnv`は値の保持ではなく、アドレスを保持（スナップショットではない）
 
-```JavaScript
+``` js
 let apple = '🍎'
 {
     let banan = '🍌'
@@ -52,7 +52,7 @@ let apple = '🍎'
 - 関数が呼び出されると関数に対応した新しい`Lexical Environment`が生成される
 - `outerEnv`には、関数呼び出し元の参照がセットされる
 
-```JavaScript
+``` js
 let apple = '🍎'
 const sayFruit = (fruit) => {
     console.log(fruit)
@@ -73,7 +73,7 @@ sayFruit('🍌');
 - 関数オブジェクトは`[[environment]]`プロパティを持っている
 - `[[environment]]`プロパティは、その関数オブジェクトが作られた場所の`Lexical Environment`を指し示す。**※重要**
 
-```JavaScript
+``` js
 const sayFruitFactory = () => {
     let sayCount = 0
     return (fruit) => {
@@ -99,7 +99,7 @@ sayFruit('🍇')
 - `sayFruit1`関数の`[[environment]]`プロパティにはグローバルの`Lexical Environment`がセットされている
 - そのため、`sayFruit1`関数内で`food`にアクセスすると、`sayFruit1`関数の`Lexical Environment`には`food`がないので、`outerEnv` -> `[[environment]]`と辿り、グローバルの`Lexical Environment`で`food`を見つけることになる
 - `sayFruit1`関数の直前に定義した`food`の`🍌`にはアクセスしない
-```JavaScript
+``` js
 let food = '🍎'
 const sayFruit1 = () => console.log(food)
 
