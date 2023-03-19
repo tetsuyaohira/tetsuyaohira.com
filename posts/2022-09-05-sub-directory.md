@@ -14,7 +14,7 @@ date: "2022-09-05"
 
 [trailingSlash](https://nextjs-ja-translation-docs.vercel.app/docs/api-reference/next.config.js/exportPathMap#末尾にスラッシュを追加する)
 
-```
+```JavaScript
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
