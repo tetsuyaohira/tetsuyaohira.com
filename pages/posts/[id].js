@@ -30,7 +30,7 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article className="p-10">
+      <article className="pt-10">
         <h1 className="text-3xl font-bold">{postData.title}</h1>
         <div className="mt-5 text-gray-500">{postData.date}</div>
         <ReactMarkdown
