@@ -49,8 +49,10 @@ blockquote {
     background-color: blanchedalmond;
     padding: 1rem;
 }
-
 a {
     color: #215aa0;
+}
+a:hover {
+    /*color: #215aa0;*/
     text-decoration: underline;
 }
