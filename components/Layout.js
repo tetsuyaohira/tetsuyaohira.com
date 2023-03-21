@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-const name = 'Tetsuya Ohira / 大平 哲也'
 export const siteTitle = "Tetsuya Ohira's Blog"
 
 function Layout({ children, home }) {
@@ -19,8 +18,15 @@ function Layout({ children, home }) {
           </>
         ) : (
           <>
-            <img className="h-24 w-24 rounded-full" src="/images/profile.jpg" />
-            <h1 className="mt-4 text-4xl">{siteTitle}</h1>
+            <Link href="/">
+              <img
+                className="h-24 w-24 cursor-pointer rounded-full"
+                src="/images/profile.jpg"
+              />
+            </Link>
+            <Link href="/">
+              <h1 className="mt-4 cursor-pointer text-4xl">{siteTitle}</h1>
+            </Link>
           </>
         )}
       </header>
