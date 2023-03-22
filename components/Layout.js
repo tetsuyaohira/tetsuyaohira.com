@@ -5,7 +5,7 @@ export const siteTitle = "Tetsuya Ohira's Blog"
 
 function Layout({ children, home }) {
   return (
-    <div className="m-auto mt-10 max-w-screen-lg p-5">
+    <div className="container m-auto p-5">
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
