@@ -27,7 +27,7 @@ export default function Home({ allPostsData }) {
       <section>
         <article className="flex flex-col gap-y-8 pt-10">
           {allPostsData.map(({ id, title, date }) => (
-            <article key={{ id }}>
+            <article key={id}>
               <small className="text-gray-500">{`${date}`}</small>
               <br />
               <Link href={`/posts/${id}`}>
