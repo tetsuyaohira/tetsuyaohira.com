@@ -13,7 +13,11 @@ function Layout({ children, home }) {
       <header className="flex flex-col items-center">
         {home ? (
           <>
-            <img className="h-32 w-32 rounded-full" src="/images/profile.jpg" />
+            <img
+              className="h-32 w-32 rounded-full"
+              src="/images/profile.jpg"
+              alt="avatar"
+            />
             <h1 className="mt-4 text-4xl">{siteTitle}</h1>
           </>
         ) : (
@@ -22,6 +26,7 @@ function Layout({ children, home }) {
               <img
                 className="h-24 w-24 cursor-pointer rounded-full"
                 src="/images/profile.jpg"
+                alt="avatar"
               />
             </Link>
             <Link href="/">
