@@ -2,70 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-pre {
-    margin: 1.2rem 0;
+code {
+    background: #f1f5f9;
+    border-radius: 4px;
+    padding: 0 4px;
 }
 
-code {
-    background: #215aa012;
+pre code {
+    background: #1e1e1e;
+    padding: unset;
 }
 
 ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 20px;
+    @apply block list-disc my-4 mx-0 pl-4;
 }
 
 li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+    @apply list-item;
 }
 
 ol {
-    display: block;
-    list-style-type: decimal;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 20px;
+    @apply block list-decimal my-4 mx-0 pl-4;
 }
 
 h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+    @apply text-2xl font-bold;
 }
 
 blockquote {
-    background-color: blanchedalmond;
-    padding: 1rem;
+    @apply bg-amber-100 p-4;
 }
+
 a {
-    color: #215aa0;
+    @apply text-blue-600;
 }
+
 a:hover {
-    text-decoration: underline;
+    @apply underline;
 }
 
 h3 {
-    display: block;
-    font-size: 1.25em;
-    -webkit-margin-before: 0.83em;
-    margin-block-start: 0.83em;
-    -webkit-margin-after: 0.83em;
-    margin-block-end: 0.83em;
-    -webkit-margin-start: 0px;
-    margin-inline-start: 0px;
-    -webkit-margin-end: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+    @apply text-lg font-bold my-3 mx-0;
 }
