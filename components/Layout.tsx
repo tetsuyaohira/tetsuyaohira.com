@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const siteTitle = "Tetsuya Ohira's Blog"
 
@@ -13,8 +14,10 @@ function Layout({ children, home }) {
       <header className="flex flex-col items-center">
         {home ? (
           <>
-            <img
-              className="h-32 w-32 rounded-full"
+            <Image
+              className="rounded-full"
+              width={128}
+              height={128}
               src="/images/profile.jpg"
               alt="avatar"
             />
@@ -23,8 +26,10 @@ function Layout({ children, home }) {
         ) : (
           <>
             <Link href="/">
-              <img
+              <Image
                 className="h-24 w-24 cursor-pointer rounded-full"
+                width={96}
+                height={96}
                 src="/images/profile.jpg"
                 alt="avatar"
               />
