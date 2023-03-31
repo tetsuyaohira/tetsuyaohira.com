@@ -1,6 +1,5 @@
-import Head from 'next/head'
 import Link from 'next/link'
-import Layout, { siteTitle } from '../components/Layout'
+import Layout from '../components/Layout'
 import { getPostsData } from '../lib/post'
 
 // SSGの場合
@@ -15,15 +14,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-
-      <section>
-        <p className="text-center text-base">Software Developer in Japan 🚀</p>
-      </section>
-
+    <Layout home={true}>
       <section>
         <article className="flex flex-col gap-y-8 pt-10">
           {allPostsData.map(({ id, title, date }) => (

@@ -1,6 +1,5 @@
 import Layout from '../../components/Layout'
 import { getAllPostIds, getPostData } from '../../lib/post'
-import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism'
@@ -26,10 +25,7 @@ export async function getStaticProps({ params }) {
 
 export default function Post({ postData }) {
   return (
-    <Layout>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
+    <Layout home={false}>
       <article className="pt-10">
         <h1 className="text-3xl font-bold">{postData.title}</h1>
         <div className="mt-5 text-gray-500">{postData.date}</div>

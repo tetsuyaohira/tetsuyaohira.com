@@ -1,22 +1,22 @@
 import { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { NextRouter, useRouter } from 'next/router'
 
 import { existsGaId, pageview } from '../lib/gtag'
 
-export default function usePageView() {
-  const router = useRouter()
+export default function usePageView(): void {
+  const router: NextRouter = useRouter()
 
   useEffect(() => {
     if (!existsGaId) {
       return
     }
-    const handleRouteChange = (path) => {
+    const handleRouteChange = (path): void => {
       pageview(path)
     }
 
     router.events.on('routeChangeComplete', handleRouteChange)
 
-    return () => {
+    return (): void => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events])
