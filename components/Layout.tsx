@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 import { ReactNode } from 'react'
 
 export const siteTitle = "Tetsuya Ohira's Blog"
@@ -18,10 +17,8 @@ function Layout<Props>({ children, home }) {
 
       <header className="flex flex-col items-center">
         <Link href="/">
-          <Image
-            className="cursor-pointer rounded-full"
-            width={128}
-            height={128}
+          <img
+            className="h-32 w-32 cursor-pointer rounded-full"
             src="/images/profile.jpg"
             alt="avatar"
           />

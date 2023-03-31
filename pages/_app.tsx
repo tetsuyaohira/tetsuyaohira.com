@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import GoogleAnalytics from '../components/GoogleAnalytics'
 import usePageView from '../hooks/usePageView'
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   usePageView()
 
   return (
@@ -13,4 +13,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default App
