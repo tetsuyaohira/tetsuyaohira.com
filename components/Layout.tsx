@@ -1,10 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import { ReactNode } from 'react'
 
 export const siteTitle = "Tetsuya Ohira's Blog"
 
-function Layout({ children, home }) {
+type Props = {
+  children: ReactNode
+  home: boolean
+}
+function Layout<Props>({ children, home }) {
   return (
     <div className="container m-auto p-5">
       <Head>
@@ -12,34 +17,23 @@ function Layout({ children, home }) {
       </Head>
 
       <header className="flex flex-col items-center">
-        {home ? (
-          <>
-            <Image
-              className="rounded-full"
-              width={128}
-              height={128}
-              src="/images/profile.jpg"
-              alt="avatar"
-            />
-            <h1 className="mt-4 text-4xl">{siteTitle}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <Image
-                className="h-24 w-24 cursor-pointer rounded-full"
-                width={96}
-                height={96}
-                src="/images/profile.jpg"
-                alt="avatar"
-              />
-            </Link>
-            <Link href="/">
-              <h1 className="mt-4 cursor-pointer text-4xl">{siteTitle}</h1>
-            </Link>
-          </>
-        )}
+        <Link href="/">
+          <Image
+            className="cursor-pointer rounded-full"
+            width={128}
+            height={128}
+            src="/images/profile.jpg"
+            alt="avatar"
+          />
+        </Link>
+        <Link href="/">
+          <h1 className="mt-4 cursor-pointer text-4xl">{siteTitle}</h1>
+        </Link>
       </header>
+
+      <section>
+        <p className="text-center text-base">Software Developer in Japan 🚀</p>
+      </section>
 
       <main>{children}</main>
 
