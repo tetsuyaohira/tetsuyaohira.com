@@ -41,6 +41,10 @@ a:hover {
     @apply underline;
 }
 
+h2 {
+    @apply mt-14;
+}
+
 h3 {
-    @apply text-lg font-bold my-3 mx-0;
+    @apply text-lg font-bold my-3;
 }
