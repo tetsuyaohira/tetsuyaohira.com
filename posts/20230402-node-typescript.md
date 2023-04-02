@@ -5,7 +5,7 @@ date: "2023-04-02"
 
 ## `typescript`、`express`をインストール
 
-``` bash
+```bash
 npm init -y
 npm install typescript
 npx tsc --init
@@ -13,19 +13,19 @@ npm install express
 ```
 
 ## `app.ts`を作成
-``` js
+```bash
 touch app.ts
 ```
 
-## `app.ts`で`express`をrequireしたところエラーが出た
+## `app.ts`で`express`を`require`したところエラーが出た
 
-``` js
+```js
 const express = require('express')
 ```
 
 ![2023-04-02-05.png](/images/2023-04-02-05.png)
 
-```
+```bash
 TS2580: Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
 ```
 
@@ -35,7 +35,7 @@ TS2580: Cannot find name 'require'. Do you need to install type definitions for 
 - `@types/node`はNode.jsの型定義ファイル
 - インストールすると、エラーが解消される
 
-``` bash
+```bash
 npm install -D @types/node
 ```
 
@@ -47,7 +47,7 @@ npm install -D @types/node
 - `app`の型推論が`any`になっておりexpress用の型定義ファイルが無いため
 - `express`用の型定義ファイルである`@types/express`をインストールする
 
-``` bash
+```bash
 npm install -D @types/express
 ```
 
@@ -59,7 +59,7 @@ npm install -D @types/express
 
 ![2023-04-02-03.png](/images/2023-04-02-03.png)
 
-```
+```bash
 TS80005: 'require' call may be converted to an import.
 ```
 
