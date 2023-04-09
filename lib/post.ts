@@ -1,22 +1,23 @@
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
+import { Post } from '../types/types'
 
 const postsDirectory: string = path.join(process.cwd(), 'posts')
 
 // mdファイルのデータを取り出す
-export function getPostsData() {
+export function getPostsData(): Post[] {
   const fileNames: string[] = fs.readdirSync(postsDirectory)
   return fileNames.reverse().map((fileName) => {
     const id: string = fileName.replace(/\.md$/, '')
     const fullPath: string = path.join(postsDirectory, fileName)
     const fileContents: string = fs.readFileSync(fullPath, 'utf8')
-
     const matterResult: matter.GrayMatterFile<string> = matter(fileContents)
-
+    const { title, date } = matterResult.data
     return {
       id,
-      ...matterResult.data,
+      title,
+      date,
     }
   })
 }
