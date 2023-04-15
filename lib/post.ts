@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
-import { Post } from '../types/types'
+import { Post, PostData } from '../types/types'
 
 const postsDirectory: string = path.join(process.cwd(), 'posts')
 
@@ -22,7 +22,7 @@ export function getPostsData(): Post[] {
   })
 }
 
-export function getAllPostIds() {
+export function getAllPostIds(): { params: { id: string } }[] {
   const fileNames = fs.readdirSync(postsDirectory)
   return fileNames.map((fileName) => {
     return {
@@ -33,7 +33,7 @@ export function getAllPostIds() {
   })
 }
 
-export async function getPostData(id) {
+export async function getPostData(id: string): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const matterResult = matter(fileContents)

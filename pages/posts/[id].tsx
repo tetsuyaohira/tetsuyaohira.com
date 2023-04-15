@@ -3,6 +3,8 @@ import { getAllPostIds, getPostData } from '../../lib/post'
 import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import { NextPage } from 'next'
+import { PostData } from '../../types/types'
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
@@ -14,7 +16,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id)
+  const postData: PostData = await getPostData(params.id)
 
   return {
     props: {
@@ -23,7 +25,11 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default function Post({ postData }) {
+type Props = {
+  postData: PostData
+}
+
+const Post: NextPage = ({ postData }: Props) => {
   return (
     <Layout home={false}>
       <article className="pt-10">
@@ -57,3 +63,4 @@ export default function Post({ postData }) {
     </Layout>
   )
 }
+export default Post

@@ -1,11 +1,13 @@
-import { FC } from 'react'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 import { getPostsData } from '../lib/post'
 import { Post } from '../types/types'
+import { NextPage } from 'next'
 
 // SSGの場合
-export async function getStaticProps() {
+export async function getStaticProps(): Promise<{
+  props: { allPostsData: Post[] }
+}> {
   const allPostsData: Post[] = getPostsData()
   return {
     props: {
@@ -18,7 +20,7 @@ type Props = {
   allPostsData: Post[]
 }
 
-const Home: FC<Props> = ({ allPostsData }) => {
+const Home: NextPage = ({ allPostsData }: Props) => {
   return (
     <Layout home={true}>
       <section>
