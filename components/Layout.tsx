@@ -1,17 +1,19 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 
 export const siteTitle = "Tetsuya Ohira's Blog"
 
 type Props = {
   children: ReactNode
   home: boolean
+  title: string
 }
-function Layout<Props>({ children, home }) {
+const Layout: FC<Props> = ({ children, home, title }) => {
   return (
     <div className="container m-auto p-5">
       <Head>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

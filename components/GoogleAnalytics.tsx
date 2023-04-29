@@ -1,7 +1,8 @@
 import Script from 'next/script'
 import { existsGaId, GA_ID } from '../lib/gtag'
+import { FC } from 'react'
 
-const GoogleAnalytics = () => (
+const GoogleAnalytics: FC = () => (
   <>
     {existsGaId && (
       <>

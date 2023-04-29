@@ -20,9 +20,9 @@ type Props = {
   allPostsData: Post[]
 }
 
-const Home: NextPage = ({ allPostsData }: Props) => {
+const Home: NextPage<Props> = ({ allPostsData }) => {
   return (
-    <Layout home={true}>
+    <Layout home={true} title={'tetsuyaohira.com'}>
       <section>
         <article className="flex flex-col gap-y-8 pt-10">
           {allPostsData.map(({ id, title, date }) => (
