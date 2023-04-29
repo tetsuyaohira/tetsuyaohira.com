@@ -29,9 +29,9 @@ type Props = {
   postData: PostData
 }
 
-const Post: NextPage = ({ postData }: Props) => {
+const Post: NextPage<Props> = ({ postData }) => {
   return (
-    <Layout home={false}>
+    <Layout home={false} title={postData.title}>
       <article className="pt-10">
         <h1 className="text-3xl font-bold">{postData.title}</h1>
         <div className="mt-5 text-gray-500">{postData.date}</div>
