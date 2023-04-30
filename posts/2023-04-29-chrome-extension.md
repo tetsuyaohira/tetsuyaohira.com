@@ -45,6 +45,3 @@ date: "2023-04-29"
         - `DeepL翻訳`の場合は、APIキーが必要なので、その辺りの設定をChrome拡張のオプションページで行えるようにする
     - 翻訳した文字列を動画内に表示する機能を追加する
         - これは、動画を見ながら翻訳した文字列を見ることで、動画の内容を理解しやすくするため
-- Oreillyの動画サービスでも字幕を翻訳して読み上げるChrome拡張を作りたい
-    - O'Reillyの動画サービス
-    - [Udemy translate & speech](https://learning.oreilly.com/home/)
