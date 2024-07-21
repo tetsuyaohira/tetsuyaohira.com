@@ -1,5 +1,5 @@
 ---
-title: "TypeScript　Union型"
+title: "TypeScriptのUnion型について"
 date: "2024-07-21"
 ---
 
