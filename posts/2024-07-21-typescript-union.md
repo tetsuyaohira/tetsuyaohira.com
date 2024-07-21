@@ -7,9 +7,9 @@ date: "2024-07-21"
 
 - TypeScriptのUnion型について学んだのでまとめます。
 
-### TypeScriptのUnion型
+## TypeScriptのUnion型
 
-#### Union型の基本的な使い方
+### Union型の基本的な使い方
 
 - Union型は、複数の型を`|`でつなげて1つの型として表現する機能
 - たとえば、次のように書くことで、`number`型と`string`型のどちらかを受け付ける型を定義できる
@@ -34,7 +34,7 @@ type Callback = (error: Error | null, response: any) => void;
 let value: "foo" | "bar" | "baz";
 ```
 
-#### Union型を絞り込む
+### Union型を絞り込む
 
 - Union型を使うと、複数の型を受け付ける変数を定義できるが、その変数を使うときには、どの型の値が入っているかを判定する必要がある
 - TypeScriptは、Union型に対して、絞り込みの機能を提供している。
