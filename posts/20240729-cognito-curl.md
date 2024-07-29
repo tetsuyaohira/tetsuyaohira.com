@@ -10,7 +10,7 @@ date: "2024-07-29"
 ## curlでAmazon Cognitoの認証を試す
 ### 事前準備
 - AWSマネジメントコンソールから`Client ID`と`Client Secret`を取得しておく
-### リクエスト
+### 認証リクエスト
 - パラメタには、`Secret Hash`が必要なので、`Secret Hash`を生成する
 ```bash
 CLIENT_ID="<YOUR_CLIENT>"
@@ -48,5 +48,29 @@ curl --location \
 }
 ```
 
+### リフレッシュトークンリクエスト
+- リフレッシュトークンを使って、アクセストークンを再取得する
+- Secret Hashの生成では、`email`ではなく`sub`を使うので注意
+```bash
+CLIENT_ID="<YOUR_CLIENT>"
+CLIENT_SECRET="<YOUR_SECRET>"
+SUB="<YOUR_SUB>"
+echo -n "$SUB$CLIENT_ID" | openssl dgst -sha256 -hmac "$CLIENT_SECRET" -binary | base64
+```
+- `Secret Hash`を生成したら、以下のリクエストを送信する
+```bash
+curl --location \
+--request POST 'https://cognito-idp.ap-northeast-1.amazonaws.com/' \
+--header 'Content-Type: application/x-amz-json-1.1' \
+--header 'X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth' \
+--data-raw '
+{"ClientId": "<YOUR_CLIENT>",
+"AuthFlow": "REFRESH_TOKEN_AUTH",
+"AuthParameters": {
+"REFRESH_TOKEN": "<YOUR_REFRESH_TOKEN>",
+"SECRET_HASH": "<CREATED_SECRET_HASH>"
+}}'
+```
 ## 参考
 - [InitiateAuth](https://docs.aws.amazon.com/ja_jp/cognito-user-identity-pools/latest/APIReference/API_InitiateAuth.html#API_InitiateAuth_Examples)
+- [Cognito adminInitiateAuthのREFRESH_TOKENフローでSECRET_HASHが合致しないエラーが発生する](https://qiita.com/nori3tsu/items/7fa72c297f93efd0b3bb)
