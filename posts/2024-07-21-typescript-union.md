@@ -193,6 +193,4 @@ if (result.success) {
 - また、型にこだわることで、コードの理解性が向上し、メンテナンス性が高まる
 
 ## 参考文献
-
-- Software Design 2024年5月号 型を制する者はTypeScriptを制す もっとTypeScriptの力を引き出そう
-    - https://gihyo.jp/magazine/SD/archive/2024/202405
+- [Software Design 2024年5月号 型を制する者はTypeScriptを制す もっとTypeScriptの力を引き出そう](https://gihyo.jp/magazine/SD/archive/2024/202405)
