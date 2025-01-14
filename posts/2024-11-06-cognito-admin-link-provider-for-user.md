@@ -21,6 +21,7 @@ date: "2024-11-06"
 ```bash
 aws cognito-idp admin-link-provider-for-user \
     --user-pool-id <ユーザープールID> \
+    --region <リージョン> \
     --destination-user ProviderName="Cognito",ProviderAttributeValue="<既存ユーザーのユーザー名>" \
     --source-user ProviderName="<IDプロバイダー名>",ProviderAttributeName="Cognito_Subject",ProviderAttributeValue="<外部プロバイダーのユーザーID>"
 ```
@@ -44,6 +45,7 @@ aws cognito-idp admin-link-provider-for-user \
 ```bash
 aws cognito-idp admin-link-provider-for-user \
     --user-pool-id ap-northeast-1_abcdefgh \
+    --region ap-northeast-1
     --destination-user ProviderName="Cognito",ProviderAttributeValue="john_doe" \
     --source-user ProviderName="Facebook",ProviderAttributeName="Cognito_Subject",ProviderAttributeValue="1234567890"
 ```
