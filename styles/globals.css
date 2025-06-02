@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Source files for Tailwind CSS */
+@source "./pages/**/*.{js,ts,jsx,tsx}";
+@source "./components/**/*.{js,ts,jsx,tsx}";
 
 code {
     background: #f1f5f9;
@@ -33,11 +35,11 @@ blockquote {
     @apply bg-amber-100 p-4;
 }
 
-a {
+.prose a {
     @apply text-blue-600;
 }
 
-a:hover {
+.prose a:hover {
     @apply underline;
 }
 

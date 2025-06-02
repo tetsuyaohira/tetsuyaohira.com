@@ -10,7 +10,7 @@ export default function usePageView(): void {
     if (!existsGaId) {
       return
     }
-    const handleRouteChange = (path): void => {
+    const handleRouteChange = (path: string): void => {
       pageview(path)
     }
 
