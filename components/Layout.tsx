@@ -25,8 +25,8 @@ const Layout: FC<Props> = ({ children, home, title }) => {
             alt="avatar"
           />
         </Link>
-        <Link href="/">
-          <h1 className="mt-4 cursor-pointer text-4xl">{siteTitle}</h1>
+        <Link href="/" className="mt-4 cursor-pointer text-4xl">
+          <h1>{siteTitle}</h1>
         </Link>
       </header>
 
@@ -38,9 +38,7 @@ const Layout: FC<Props> = ({ children, home, title }) => {
 
       {!home && (
         <div className="mt-16">
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+          <Link href="/">← Back to home</Link>
         </div>
       )}
     </div>

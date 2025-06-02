@@ -7,13 +7,13 @@ declare global {
   }
 }
 
-export const pageview = (path) => {
+export const pageview = (path: string) => {
   window.gtag('config', GA_ID, {
     page_path: path,
   })
 }
 
-export const event = ({ action, category, label, value = '' }): void => {
+export const event = ({ action, category, label, value = '' }: { action: string; category: string; label: string; value?: string }): void => {
   if (!existsGaId) {
     return
   }
