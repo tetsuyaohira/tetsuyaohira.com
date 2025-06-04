@@ -136,7 +136,7 @@ npm run dev -- "./books/リーダブルコード.epub" --combine-only
 
 ## 出力構造
 
-```
+```markdown
 output/
 ├── リーダブルコード/                    # 抽出されたテキスト
 │   └── 01-Chapter_Title.txt
