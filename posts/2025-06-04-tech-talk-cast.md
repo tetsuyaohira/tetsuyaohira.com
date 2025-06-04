@@ -7,9 +7,10 @@ date: "2025-06-04"
 
 技術書を読む時間がない自分のために、ePubファイルをポッドキャスト風の自然な音声コンテンツに変換するNode.jsアプリケーション「TechTalkCast」を作成した。
 
-## GitHubリポジトリ
+## リンク
 
-[GitHubリポジトリ](https://github.com/tetsuyaohira/tech-talk-cast)
+- [GitHubリポジトリ](https://github.com/tetsuyaohira/tech-talk-cast)
+- [Apple Podcasts - TechTalkCast](https://podcasts.apple.com/jp/podcast/techtalkcast/id1811374712)
 
 ## アプリケーションの概要
 
