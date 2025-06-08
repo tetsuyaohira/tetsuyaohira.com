@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/generate-rss.js && next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "generate-rss": "node scripts/generate-rss.js"
   },
   "dependencies": {
     "@types/react": "^18.2.0",
