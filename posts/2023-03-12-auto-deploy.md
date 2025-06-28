@@ -1,6 +1,8 @@
 ---
 title: "GitHubへのCommitをトリガーにReactのBuild、S3への配置、Cloudfrontのキャッシュクリアまでを自動化する"
 date: "2023-03-12"
+description: "AWS CodePipelineとCodeBuildを使ってGitHubプッシュからReactビルド、S3アップロード、CloudFrontキャッシュクリアまでのCI/CDパイプラインを構築"
+tags: ["AWS", "CodePipeline", "CodeBuild", "S3", "CloudFront", "CI/CD", "React", "自動デプロイ"]
 ---
 
 このブログのデプロイを自動化しました。

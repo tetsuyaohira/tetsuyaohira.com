@@ -1,6 +1,8 @@
 ---
 title: "コードブロックのシンタックスハイライト対応しました"
 date: "2023-03-19"
+description: "Reactブログにreact-markdownとreact-syntax-highlighterを使ってコードブロックのシンタックスハイライトを実装した手順を解説"
+tags: ["React", "react-markdown", "react-syntax-highlighter", "シンタックスハイライト", "Prism", "ブログ"]
 ---
 
 このブログのコードブロックのシンタックハイライト対応を行いました。

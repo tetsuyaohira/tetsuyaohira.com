@@ -8,13 +8,19 @@ type Props = {
   children: ReactNode
   home: boolean
   title: string
+  description?: string
+  tags?: string[]
 }
-const Layout: FC<Props> = ({ children, home, title }) => {
+const Layout: FC<Props> = ({ children, home, title, description, tags }) => {
   return (
     <div className="container m-auto p-5">
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
+        
+        {description && <meta name="description" content={description} />}
+        {tags && <meta name="keywords" content={tags.join(', ')} />}
+        
       </Head>
 
       <header className="flex flex-col items-center">

@@ -1,6 +1,8 @@
 ---
 title: "Next.js 12から14へ！段階的ライブラリアップデートの記録"
 date: "2025-06-02"
+description: "Next.js 12.2.5から14.2.16への大型アップデートを段階的に実施。TailwindCSS v4、TypeScript 5.8、React 18の更新で発生した問題と解決策を詳細に記録"
+tags: ["Next.js", "React", "TypeScript", "TailwindCSS", "ライブラリアップデート", "react-markdown", "ESLint", "ビルド最適化"]
 ---
 
 ## はじめに

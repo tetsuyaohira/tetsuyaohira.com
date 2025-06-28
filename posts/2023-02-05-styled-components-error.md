@@ -1,6 +1,8 @@
 ---
 title: 'Next.jsでStyled Componentsを適用するとconsoleに`Warning: Prop `className` did not match. Server: "sc-eDWCr gHhIrJ" Client: "sc-eDvSVe jXCRWx"`エラーが発生しスタイルが適用されない'
 date: "2023-02-05"
+description: "Next.js SSRでStyled-componentsのクラス名不一致エラー解決法。babel-plugin-styled-componentsによるサーバー・クライアント同期の設定方法"
+tags: ["Next.js", "Styled Components", "SSR", "エラー解決", "babel", "CSS-in-JS", "React"]
 ---
 
 ## 事象

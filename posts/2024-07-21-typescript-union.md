@@ -1,6 +1,8 @@
 ---
 title: "TypeScriptのUnion型について"
 date: "2024-07-21"
+description: "TypeScriptのUnion型の基本的な使い方からタグ付きUnion型、結果型のパターンまで、実務で役立つ型安全な設計手法を網羅性チェックとともに解説"
+tags: ["TypeScript", "Union型", "タグ付きUnion", "型安全", "結果型", "never", "網羅性チェック"]
 ---
 
 ## はじめに

@@ -1,6 +1,8 @@
 ---
 title: "Amazon Cognitoの認証をcurlで試す"
 date: "2024-07-29"
+description: "Amazon Cognitoの認証フローをcurlコマンドでテストする方法。Secret Hashの生成、初回認証、リフレッシュトークンを使った更新の具体例を紹介"
+tags: ["AWS", "Amazon Cognito", "curl", "認証", "JWT", "Secret Hash", "アクセストークン", "リフレッシュトークン"]
 ---
 
 ## はじめに

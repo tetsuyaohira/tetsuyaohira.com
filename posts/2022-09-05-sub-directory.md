@@ -1,6 +1,8 @@
 ---
 title: "Next.jsのSSGで作成したコンテンツをcloudfront + S3に配置し、サブディレクトリへのアクセスのデフォルトページをindex.htmlにする"
 date: "2022-09-05"
+description: "Next.js SSGでサブディレクトリのindex.html生成とS3静的ホスティング設定。CloudFrontでの403エラー解決方法を詳しく解説"
+tags: ["Next.js", "SSG", "AWS", "S3", "CloudFront", "静的ホスティング", "trailingSlash", "エラー解決"]
 ---
 
 ## 事象

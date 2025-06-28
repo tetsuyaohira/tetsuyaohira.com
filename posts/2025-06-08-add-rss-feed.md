@@ -1,6 +1,8 @@
 ---
 title: "Next.jsの静的ブログサイトにRSSフィードを追加した"
 date: "2025-06-08"
+description: "Next.jsの静的サイト生成ブログにRSSフィードを実装。ビルド時のXML生成、gray-matterでのfront matter処理、package.jsonのスクリプト統合などの実装手順を紹介"
+tags: ["Next.js", "RSS", "静的サイト生成", "gray-matter", "XML", "ブログ", "ビルドスクリプト"]
 ---
 
 このブログサイトにRSSフィードを追加した。実装方法とその際の設計判断について記録する。

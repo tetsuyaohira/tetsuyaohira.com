@@ -1,6 +1,8 @@
 ---
 title: "Udemy Chrome拡張機能の大型アップデート - Udemy Business対応と多言語サポート拡張"
 date: "2025-06-14"
+description: "Udemy翻訳・TTS Chrome拡張の大型アップデートを実施。Udemy Business対応、新たに10言語を追加、メモリリーク対策、UI/UX改善などで安定性と使いやすさを大幅向上"
+tags: ["Chromeエクステンション", "Udemy", "JavaScript", "Web Speech API", "翻訳", "音声合成", "国際化", "TTS", "UX改善"]
 ---
 
 ## はじめに

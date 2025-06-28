@@ -1,6 +1,8 @@
 ---
 title: "Next.jsの検索フォームにデバウンスを実装する"
 date: "2025-03-22"
+description: "Next.jsで検索フォームのパフォーマンスを向上させるデバウンス処理を実装。useEffectとuseStateを使ったカスタムフックで不要なAPIリクエストを削減しUXを改善"
+tags: ["Next.js", "React", "デバウンス", "useEffect", "検索フォーム", "パフォーマンス最適化", "カスタムフック", "UX"]
 ---
 
 ## はじめに

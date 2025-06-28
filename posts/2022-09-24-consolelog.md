@@ -1,6 +1,8 @@
 ---
 title: "console.logをもっと使いこなす！"
 date: "2022-09-24"
+description: "console.logを超えるConsole APIの活用術。カスタムCSSスタイリング、文字列置換、時間計測、グループ化なら30以上の便利機能を実例付きで解説"
+tags: ["JavaScript", "console", "Console API", "デバッグ", "CSS", "フロントエンド", "開発ツール"]
 ---
 
 ブラウザ上でのデバッグにconsole.log()をよく使いますが、MDNのConsole APIのページを見ると色々ありましたので調べてみました。

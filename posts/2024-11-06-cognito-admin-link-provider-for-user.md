@@ -1,6 +1,8 @@
 ---
 title: "Amazon Cognitoのユーザーにフェデレーションユーザーをリンクする"
 date: "2024-11-06"
+description: "AWS CLIを使ってAmazon CognitoのAdminLinkProviderForUserを実行し、既存ユーザーにフェデレーションユーザーをリンクする手順を解説"
+tags: ["AWS", "Amazon Cognito", "AWS CLI", "フェデレーション", "AdminLinkProviderForUser", "Facebook", "Google", "ユーザープール"]
 ---
 
 ## はじめに

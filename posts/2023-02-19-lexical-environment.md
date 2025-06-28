@@ -1,6 +1,8 @@
 ---
 title: "`Lexical Environment`(レキシカル環境)と`closure`(クロージャ)の関係を理解する"
 date: "2023-02-19"
+description: "JavaScriptのレキシカル環境とクロージャの仕組みを詳しく解説。変数の参照先がどのように決まるのか、図解を交えて分かりやすく説明"
+tags: ["JavaScript", "クロージャ", "スコープ", "レキシカル環境", "ES6"]
 ---
 
 ## 課題感

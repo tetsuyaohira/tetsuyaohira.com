@@ -1,6 +1,8 @@
 ---
 title: "HOC(Higher-Order Component)を使って共通処理をまとめる"
 date: "2024-02-07"
+description: "ReactのHOCパターンを使ってローディング状態やエラー処理などの共通処理を再利用可能なコンポーネントとしてラッピングする方法を紹介"
+tags: ["React", "HOC", "Higher-Order Component", "TypeScript", "共通処理", "ローディング", "エラー処理"]
 ---
 
 ## はじめに

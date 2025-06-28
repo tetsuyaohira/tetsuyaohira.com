@@ -1,6 +1,8 @@
 ---
 title: "useSWRMutationのtriggerに複数の引数を渡す"
 date: "2024-02-04"
+description: "useSWRMutationのtrigger関数に複数の引数を渡す方法を解説。オブジェクトでラッピングして変更前後のデータを一度に渡す実装例を紹介"
+tags: ["React", "useSWRMutation", "SWR", "TypeScript", "API", "mutate", "フック"]
 ---
 
 ## はじめに

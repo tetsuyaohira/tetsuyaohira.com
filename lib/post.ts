@@ -13,11 +13,13 @@ export function getPostsData(): Post[] {
     const fullPath: string = path.join(postsDirectory, fileName)
     const fileContents: string = fs.readFileSync(fullPath, 'utf8')
     const matterResult: matter.GrayMatterFile<string> = matter(fileContents)
-    const { title, date } = matterResult.data
+    const { title, date, description, tags } = matterResult.data
     return {
       id,
       title,
       date,
+      description,
+      tags,
     }
   })
 }
@@ -38,12 +40,14 @@ export async function getPostData(id: string): Promise<PostData> {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const matterResult = matter(fileContents)
 
-  const { title, date } = matterResult.data
+  const { title, date, description, tags } = matterResult.data
 
   return {
     id,
     markdown: matterResult.content,
     title,
     date,
+    description,
+    tags,
   }
 }

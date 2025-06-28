@@ -1,6 +1,8 @@
 ---
 title: "Webサイトの構成"
 date: "2022-08-29"
+description: "Next.js、AWS S3、CloudFrontを使った静的ブログサイトの構築方法。Markdownの記事をremarkで変換してHTML化する技術構成を解説"
+tags: ["Next.js", "AWS", "S3", "CloudFront", "技術構成", "静的サイト", "Markdown", "remark"]
 ---
 
 ## Webサイトの構成
