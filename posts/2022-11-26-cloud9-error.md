@@ -1,6 +1,8 @@
 ---
 title: "AWS Cloud9の作成で`Cloud9 could not connect to the EC2 instance. Please check your VPC configuration and network settings to troubleshoot the issue. Go to CloudFormation`エラーが発生する"
 date: "2022-11-26"
+description: "AWS Cloud9でEC2接続エラーの解決法。「パブリックIPアドレスを自動割り当て」設定によるVPC設定エラーのトラブルシューティング手順"
+tags: ["AWS", "Cloud9", "EC2", "VPC", "エラー解決", "ネットワーク設定", "トラブルシューティング"]
 ---
 ## 事象
 - AWS Cloud9の作成が失敗する

@@ -1,6 +1,8 @@
 ---
 title: "Node.js + TypeScriptでexpressの入力支援、型推論を表示させるまで"
 date: "2023-04-02"
+description: "Node.jsとTypeScriptでExpressの型安全性を確保し、IDEの入力支援を有効にするための@typesパッケージとimport文の設定方法"
+tags: ["Node.js", "TypeScript", "Express", "@types", "型定義", "import", "require"]
 ---
 
 ## `typescript`、`express`をインストール

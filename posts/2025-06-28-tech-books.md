@@ -1,6 +1,8 @@
 ---
-title: "LLMと一緒に技術書を読む(2025-06版)"
+title: "LLM(Claude Code)と一緒に技術書を読む(2025-06版)"
 date: "2025-06-28"
+description: "Claude Code活用の技術書読書術２０２５年版。LLMとの対話型学習、ePub展開による図表参照、質疑応答での理解深化で読書体験を革新"
+tags: ["読書", "技術書", "LLM", "Claude Code", "AI学習", "ePub", "対話型学習", "学習法"]
 ---
 
 [技術書の読み方(2022-11版)](https://tetsuyaohira.com/posts/2022-11-07-tech-books/)、[技術書の読み方(2023-11版)](https://tetsuyaohira.com/posts/2023-11-25-tech-books/)に続く、技術書の読み方シリーズの第3弾です。

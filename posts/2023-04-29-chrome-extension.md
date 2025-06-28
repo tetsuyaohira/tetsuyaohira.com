@@ -1,6 +1,8 @@
 ---
 title: "Udemyのコンテンツの字幕を翻訳し合成音声で読み上げるChrome拡張を作りました"
 date: "2023-04-29"
+description: "Udemyの英語字幕をリアルタイムで日本語翻訳し、合成音声で読み上げるChromeエクステンションを開発。Web Speech APIとGoogle翻訳を活用"
+tags: ["Chromeエクステンション", "JavaScript", "Web Speech API", "Google翻訳", "Udemy", "翻訳", "音声合成"]
 ---
 
 ## はじめに

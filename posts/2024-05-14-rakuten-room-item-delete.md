@@ -1,6 +1,8 @@
 ---
 title: "楽天ROOMに投稿した商品を削除するSelenium IDE定義"
 date: "2024-05-14"
+description: "楽天ROOMの投稿上限に達した際に必要な商品削除作業をSelenium IDEで自動化。20,000件の投稿を効率的に一括削除する方法を解説"
+tags: ["Selenium IDE", "楽天ROOM", "自動化", "Chromeエクステンション", "スクレイピング", "一括削除"]
 ---
 
 ## はじめに

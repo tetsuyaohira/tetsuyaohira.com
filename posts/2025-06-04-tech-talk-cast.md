@@ -1,6 +1,8 @@
 ---
 title: "技術書をポッドキャスト風音声に変換するNode.jsアプリケーション「TechTalkCast」を作成した"
 date: "2025-06-04"
+description: "ePub技術書をChatGPT APIで会話調に変換し、macOS sayコマンドでポッドキャスト風音声コンテンツを生成するNode.jsアプリを開発。LLMペアプログラミングでワンデー完成"
+tags: ["Node.js", "TypeScript", "ChatGPT API", "ePub", "音声合成", "macOS", "ffmpeg", "RSS", "ポッドキャスト", "LLM", "ペアプログラミング"]
 ---
 
 ## はじめに

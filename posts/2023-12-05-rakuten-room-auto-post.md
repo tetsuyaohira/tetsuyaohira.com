@@ -1,6 +1,8 @@
 ---
 title: "楽天ROOMに自動投稿するNode.jsアプリケーションを作成した"
 date: "2023-12-05"
+description: "楽天API、ChatGPT API、Puppeteerを組み合わせた楽天ROOM自動投稿ツールを開発。商品紹介文のAI生成から定期実行までの実装手順と成果を紹介"
+tags: ["Node.js", "ChatGPT API", "Puppeteer", "楽天API", "スクレイピング", "自動化", "cron", "アフィリエイト"]
 ---
 
 ## はじめに

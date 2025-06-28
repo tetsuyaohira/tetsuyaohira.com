@@ -1,6 +1,8 @@
 ---
 title: "Kindle Scribeでの固定レイアウトの見え方"
 date: "2024-12-01"
+description: "Kindle ScribeとBoox Nova Air2での技術書表示を比較レビュー。固定レイアウトの文字の濃さ、リフローレイアウトの読みやすさ、使い勝手を比較検証"
+tags: ["Kindle Scribe", "Boox Nova Air2", "電子書籍端末", "技術書", "E Ink", "レンティオ", "レビュー"]
 ---
 
 ![Kindle ScribeとBoox Nova Air2の比較](/images/20241201-01.png)

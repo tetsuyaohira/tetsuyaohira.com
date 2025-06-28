@@ -1,6 +1,8 @@
 ---
 title: "このブログサイトのデプロイをAmplifyに変更した"
 date: "2025-03-31"
+description: "Next.jsブログのデプロイ先をS3+CloudFrontからAWS Amplifyに移行。設定のシンプル化とCI/CDパイプラインの簡略化で運用負荷を大幅に減らせた移行体験を報告"
+tags: ["AWS", "Amplify", "Next.js", "S3", "CloudFront", "CodePipeline", "CodeBuild", "デプロイ", "CI/CD"]
 ---
 
 ## はじめに
