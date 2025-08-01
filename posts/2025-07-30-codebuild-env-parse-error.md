@@ -1,9 +1,8 @@
 ---
 title: 'AWS CodeBuildで環境変数にスペースを含む場合のパースエラー対処法'
 date: '2025-07-30'
+description: 'AWS CodeBuildでDockerビルド時に環境変数にスペースが含まれると発生するパースエラーの原因と解決方法を解説。クォートで囲むことで解決可能'
 tags: [ 'AWS', 'CodeBuild', 'Docker', '環境変数' ]
-draft: false
-summary: 'CodeBuildでアプリをビルドする際、環境変数にスペースが含まれているとdotenvのパースエラーが発生する問題とその解決方法'
 ---
 
 ## 問題の概要
