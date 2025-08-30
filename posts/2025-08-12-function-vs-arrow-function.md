@@ -1,6 +1,7 @@
 ---
 title: 'JavaScriptのfunction宣言とアロー関数、どう使い分ける？'
 date: '2025-08-12'
+description: 'アロー関数がモダンだからといって全部使うのはNG。function宣言とアロー関数の違いを理解して適切に使い分けよう。ホイスティング、this、argumentsなど技術的な差異から実践的な判断基準まで詳しく解説。'
 tags: ['JavaScript', 'TypeScript', 'Best Practices']
 ---
 
