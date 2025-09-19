@@ -46,8 +46,7 @@ RUN apt-get update \
 
 - `ca-certificates` と `curl` を入れて証明書を取得
 - 公式の `global-bundle.pem` を `/usr/local/share/ca-certificates/aws-rds.crt` として配置
-- `update-ca-certificates` で `/etc/ssl/certs/aws-rds.crt` が信頼ストアへ展開される
-- その後に PHP 拡張やその他のパッケージをインストール
+- `update-ca-certificates` で `/etc/ssl/certs/aws-rds.crt` が信頼ストアへ展開
 
 ## 動作確認
 
