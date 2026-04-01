@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import Home from '../pages/index'
 import '@testing-library/jest-dom'
-import { all } from 'mdast-util-to-hast'
 
 describe('Home', () => {
   it('renders a heading', () => {
