@@ -5,6 +5,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import { NextPage, GetStaticProps, GetStaticPaths } from 'next'
 import { PostData } from '../../types/types'
+import MarkdownLink from '../../components/MarkdownLink'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds()
@@ -43,6 +44,7 @@ const Post: NextPage<Props> = ({ postData }) => {
         <div className="prose mt-5">
           <ReactMarkdown
             components={{
+              a: MarkdownLink,
               code({ node, className, children, ...props }: any) {
                 const match = /language-(\w+)/.exec(className || '')
                 return match ? (
